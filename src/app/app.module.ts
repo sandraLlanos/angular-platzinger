@@ -13,7 +13,7 @@ const appRoutes: Routes = [
   {path: 'home', component: HomeComponent  },
   {path: 'login', component: LoginComponent  },
   {path: 'profile', component: ProfileComponent  },
-  {path: 'conversation', component: ConversationComponent  }
+  {path: 'conversation/:uid', component: ConversationComponent  }
 ]
 
 @NgModule({

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../interfaces/user';
+// import { User } from '../interfaces/user';
 import { getMaxListeners } from 'cluster';
 
 @Component({
@@ -10,15 +10,15 @@ import { getMaxListeners } from 'cluster';
 export class MenuComponent implements OnInit {
 
   constructor() { 
-    let myUser: User = {
-      nick: 'eduardo',
-      subnick: 'Hola',
-      age: 12,
-      email: 'sa@gmail.com',
-      friend: true,
-      uid: 1
-    };
-    console.log(myUser);
+    // let myUser: User = {
+    //   nick: 'eduardo',
+    //   subnick: 'Hola',
+    //   age: 12,
+    //   email: 'sa@gmail.com',
+    //   friend: true,
+    //   uid: 1
+    // };
+    // console.log(myUser);
   }
 
   ngOnInit() {
