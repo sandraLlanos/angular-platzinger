@@ -8,6 +8,9 @@ import { HomeComponent } from './home/home.component';
 import { ConversationComponent } from './conversation/conversation.component';
 import { Routes, RouterModule } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
+import { SearchPipe } from "./pipes/search";
+import { FormsModule } from '@angular/forms'
+// import { RepeatPIPES } from './pipes/search';
 const appRoutes: Routes = [
   {path: '', component: HomeComponent  },
   {path: 'home', component: HomeComponent  },
@@ -23,11 +26,14 @@ const appRoutes: Routes = [
     LoginComponent,
     HomeComponent,
     ConversationComponent,
-    MenuComponent
+    MenuComponent,
+    SearchPipe
+    // RepeatPIPES
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

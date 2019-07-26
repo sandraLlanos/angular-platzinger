@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import { User } from '../interfaces/user';
-import { getMaxListeners } from 'cluster';
+// import { getMaxListeners } from 'cluster';
 
 @Component({
   selector: 'app-menu',
