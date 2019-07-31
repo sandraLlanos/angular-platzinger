@@ -10,6 +10,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
 import { SearchPipe } from "./pipes/search";
 import { FormsModule } from '@angular/forms'
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from '../environments/environment';
+import { AngularFireDatabaseModule } from '@angular/fire/database'
 // import { RepeatPIPES } from './pipes/search';
 const appRoutes: Routes = [
   {path: '', component: HomeComponent  },
@@ -27,13 +33,18 @@ const appRoutes: Routes = [
     HomeComponent,
     ConversationComponent,
     MenuComponent,
-    SearchPipe
+    SearchPipe,
     // RepeatPIPES
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule, 
+    AngularFireAuthModule, 
+    AngularFireStorageModule,
+    AngularFireDatabaseModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

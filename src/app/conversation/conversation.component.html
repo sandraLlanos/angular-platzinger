@@ -1,4 +1,4 @@
-<p>
+<!-- <p>
     {{friend | json}}
 </p>
 <p>
@@ -6,8 +6,73 @@
 </p>
 <p>
     {{today | date:'medium'}}
-</p>
-
+</p> -->
 <!-- <p>
     {{'gato gato gato' | repeat: 3}}
 </p> -->
+
+<!-- <div class="conversationContainer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="avatarFrameonline marbo15 marto15">
+                    <img src="assets/img/generic_avatar.png" class="img-fluid" alt="">
+                </div>
+                <hr />
+            </div>
+            <div class="col-md-3">
+                <div class="avatarFrameonline">
+                    <img src="assets/img/generic_avatar.png" class="img-fluid" alt="">
+                </div>
+            </div>
+            <div class="col-md-9">                
+                 <b>{{user.nick}}</b> <small>({{user.status}})</small> <br />
+                {{user.subnick || 'Gato Malo'}} 
+                <b>nick </b>  <small> status</small> <br />
+                subnick
+            </div>
+        </div>
+    </div>
+</div> -->
+<div id="conversationContainer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 ">
+                <div class="avatarFrameonline frame marbo15 marto15">
+                    <img src="assets/img/generic_avatar.png" class="img-fluid" alt="">
+                </div>
+                <hr />
+                <div class="avatarFrameonline frame marbo15 marto15">
+                    <img src="assets/img/generic_avatar.png" class="img-fluid" alt="">
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div>
+                    <span class="friend-nick"><b>{{ friend.nick }}</b></span> - <span class="friend-status">({{ friend.status }})</span>
+                </div>
+                <small>{{friend.subnick || 'I love my cat'}}</small>
+                <hr />
+                <div class="chatUser">
+                    {{value}}
+                </div>
+                <br />
+                <label>último mensaje recibido {{today | date:medium}}</label>
+                <div>
+                    <textarea class="typeUser" #box (keyup.enter)="update(box.value)" (blur)="update(box.value)" placeholder="Type here..."></textarea>
+                </div>
+                <div>
+                    <select id="emojis">
+                        <option  value="100" style="background-image:url(assets/img/icons/heart.gif);">miu
+                        </option>
+                        <option value="">hola
+                            <img src="/assets/img/icons/heart.gif">
+                        </option>
+                        <option value="">afdio
+                            <img src="assets/img/icons/logo_live_add.png">  
+                        </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

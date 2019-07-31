@@ -11,7 +11,9 @@ import { UserService } from '../services/user.service';
 export class HomeComponent implements OnInit {
   friends: User[]; 
   query: string = '';
-
+  onKeydown(event) {
+    console.log(event);
+  }
   constructor(private userServices: UserService) {
     this.friends = this.userServices.getFriends();
     
@@ -52,8 +54,9 @@ export class HomeComponent implements OnInit {
   //   };
   //   this.friends = [usuario1, usuario2, usuario3, usuario4, usuario5]; 
   // la informacion dse va a consumir por medio de un servicio
+  
     }
-
+    
   ngOnInit() {
   }
 

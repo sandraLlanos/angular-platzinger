@@ -15,11 +15,15 @@ export class ConversationComponent implements OnInit {
   price: number = 2.3837466999;
   invocando: any;
   today: any = Date.now();  
+ 
+  value = '';
+  update(value: string) { this.value = value; };
   constructor(private activateRoute: ActivatedRoute, 
               private userServices: UserService) {
     this.friends = this.userServices.getFriends();
     this.friendsId = this.activateRoute.snapshot.params['uid'];
     console.log(this.friendsId);
+    
 
     // let usuario1: User = {
     //   nick: 'Eduardo',
